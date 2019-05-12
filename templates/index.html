@@ -1,0 +1,28 @@
+<!doctype html>
+<html style="height:100%;">
+<head>
+    <title>Download Annotations</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <center>
+        <div class="jumbotron" style="margin-top:20px;">
+            <h1 style="margin:-20px 0 40px 0;">Image Annotator</h1>
+            <form enctype="multipart/form-data" method="post">
+                <label class="btn btn-default">
+                    <input id="file" name="file" type="file" multiple/>
+                </label>
+                <br>
+                <button type="submit" class="btn btn-success" style="margin-top:30px;">Submit</button>
+            </form>
+        </div>
+        </center>
+    </div>
+    <script>
+        var folder = document.getElementById("folder");
+        console.log(folder.value)
+    </script>
+</body>
+</html>
