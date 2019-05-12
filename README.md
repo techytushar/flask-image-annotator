@@ -25,7 +25,7 @@ pip3 install Flask
 * If you want to delete an annotation click "-" button beside the annotation
 * Click the next button to go to the next image
 * Annotate all the images
-* At last, download the CSV file
+* At last, download the zip file
 
 ## Format of CSV file
 

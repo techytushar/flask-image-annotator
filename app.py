@@ -1,6 +1,7 @@
 import os
 import shutil
 
+
 from flask import Flask, redirect, url_for, request, flash
 from flask import render_template
 from flask import send_file
@@ -91,9 +92,11 @@ def images(f):
 
 @app.route('/download')
 def download():
-    return send_file('out.csv',
+    shutil.copyfile('out.csv', 'images/annotations.csv')
+    shutil.make_archive('final', 'zip', 'images')
+    return send_file('final.zip',
                      mimetype='text/csv',
-                     attachment_filename='annotations.csv',
+                     attachment_filename='final.zip',
                      as_attachment=True)
 
 if __name__ == "__main__":
