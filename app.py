@@ -14,7 +14,10 @@ def index():
         if 'file' not in request.files:
             flash('No files selected')
             return redirect('/')
-        shutil.rmtree('./images')
+        try:
+            shutil.rmtree('./images')
+        except:
+            pass
         os.mkdir('./images')
         files = request.files.getlist("file")
         for f in files:
