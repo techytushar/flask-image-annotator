@@ -27,6 +27,22 @@ pip3 install Flask
 * Annotate all the images
 * At last, download the zip file
 
+## Run using Docker
+
+* Build the Docker image using the Dockerfile
+
+```bash
+docker build -t <image-name-here> .
+```
+
+* Run the Docker image
+
+```bash
+docker run -d -p 5000:5000 <image-name-here>
+```
+
+* Naviage to `localhost:5000` in your browser
+
 ## Format of CSV file
 
 * image: Name of the image file
